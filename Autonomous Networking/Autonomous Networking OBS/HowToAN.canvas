@@ -1,0 +1,7 @@
+{
+	"nodes":[
+		{"id":"2795cbd69099d104","type":"text","text":"# AN\n\nautonomo nel senso che\n\n- non gli do indicazioni aggiuntive\n- né risorse\n- è \"intelligente\", nei limiti dell'AI\n\t- si adatta ai cambiamenti ambientali e/o li prevede\n\n","x":-83,"y":20,"width":523,"height":400},
+		{"id":"88aeb7f35a9f1438","x":-395,"y":-10,"width":250,"height":60,"type":"text","text":"a drownet is a network of drows"}
+	],
+	"edges":[]
+}

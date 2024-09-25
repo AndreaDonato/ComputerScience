@@ -1,0 +1,157 @@
+{
+  "main": {
+    "id": "b569f8190615324f",
+    "type": "split",
+    "children": [
+      {
+        "id": "7418d9b2a8cbf031",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60daa8fe2f3350f4",
+            "type": "leaf",
+            "state": {
+              "type": "canvas",
+              "state": {
+                "file": "HowToAN.canvas",
+                "viewState": {
+                  "x": 42,
+                  "y": 50,
+                  "zoom": 0
+                }
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d9b0d66350114fea",
+    "type": "split",
+    "children": [
+      {
+        "id": "5e8fc609785894e1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "21c0847e492a85b2",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "0caa33c76191d3d2",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "bb287e358e492641",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "07398444aad834c1",
+    "type": "split",
+    "children": [
+      {
+        "id": "8a671bda5c3a60b1",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b3cf18cd0a448281",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "HowToAN.canvas",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1fdf9b949b753325",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "HowToAN.canvas",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "f0064374ec52cf26",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "27d511a09af4319a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "HowToAN.canvas"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "60daa8fe2f3350f4",
+  "lastOpenFiles": [
+    "Welcome.md",
+    "HowToAN.canvas"
+  ]
+}
