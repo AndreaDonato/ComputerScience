@@ -15,8 +15,8 @@
               "state": {
                 "file": "HowToBS.canvas",
                 "viewState": {
-                  "x": 0,
-                  "y": 0,
+                  "x": -88.35,
+                  "y": 423.75,
                   "zoom": 0
                 }
               }
@@ -149,7 +149,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "9f58eedf2748fa01",
+  "active": "7d2426abfca83d59",
   "lastOpenFiles": [
     "HowToBS.canvas",
     "Welcome.md"
