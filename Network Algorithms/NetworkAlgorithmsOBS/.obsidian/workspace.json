@@ -15,9 +15,9 @@
               "state": {
                 "file": "HowToNA.canvas",
                 "viewState": {
-                  "x": -10.580651633082113,
-                  "y": -2349.886962686274,
-                  "zoom": 0.1466666666666668
+                  "x": -1497.0220207899386,
+                  "y": -1849.1671404515587,
+                  "zoom": 0.08333333333333415
                 }
               }
             }
@@ -151,6 +151,7 @@
   },
   "active": "fe95d7c7b790bec1",
   "lastOpenFiles": [
+    "MinimumTimeWastingGraph.png",
     "3 - Rete",
     "3 - Rete/Protocolli di Instradamento/TopologiaRete.png",
     "3 - Rete/Protocolli di Instradamento/SpanningTreeBroadcast.png",
