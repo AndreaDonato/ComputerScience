@@ -15,9 +15,9 @@
               "state": {
                 "file": "HowToDS.canvas",
                 "viewState": {
-                  "x": 0,
-                  "y": 0,
-                  "zoom": 0
+                  "x": 384.6950581141773,
+                  "y": 524.7143012823894,
+                  "zoom": 0.1766666666666667
                 }
               }
             }
@@ -149,7 +149,7 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "31df8f5a15965234",
+  "active": "f3a0c3f78719f91c",
   "lastOpenFiles": [
     "Welcome.md",
     "HowToDS.canvas"
