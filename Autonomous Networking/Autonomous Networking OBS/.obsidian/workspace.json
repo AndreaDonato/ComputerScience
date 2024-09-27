@@ -15,9 +15,9 @@
               "state": {
                 "file": "HowToAN.canvas",
                 "viewState": {
-                  "x": 42,
-                  "y": 50,
-                  "zoom": 0
+                  "x": 410.8836394523159,
+                  "y": 862.8334347029268,
+                  "zoom": 0.29666666666666736
                 }
               }
             }
@@ -153,6 +153,9 @@
   "lastOpenFiles": [
     "Ciao.md",
     "HowToAN.canvas",
+    "SlottedAloha.png",
+    "PureAloha.png",
+    "RFID.png",
     "Untitled",
     "Welcome.md"
   ]
