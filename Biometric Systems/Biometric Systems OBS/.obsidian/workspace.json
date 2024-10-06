@@ -15,9 +15,9 @@
               "state": {
                 "file": "HowToBS.canvas",
                 "viewState": {
-                  "x": -332.0274404215878,
-                  "y": 2491.525122744596,
-                  "zoom": -2.9833333333333334
+                  "x": 770.6836248731762,
+                  "y": 4485.492789959291,
+                  "zoom": -1.4
                 }
               }
             }
@@ -151,6 +151,9 @@
   },
   "active": "7d2426abfca83d59",
   "lastOpenFiles": [
+    "SingleAndOverall.png",
+    "DTW.png",
+    "CosineSimilarity.png",
     "HowToBS.canvas",
     "Welcome.md"
   ]

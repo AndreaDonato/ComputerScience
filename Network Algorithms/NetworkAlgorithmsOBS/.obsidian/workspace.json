@@ -15,9 +15,9 @@
               "state": {
                 "file": "HowToNA.canvas",
                 "viewState": {
-                  "x": -1826.1768037997206,
-                  "y": -800.189927528749,
-                  "zoom": 0.17333333333333112
+                  "x": -3792.80888594829,
+                  "y": -352.2296521967372,
+                  "zoom": -0.6000000000000004
                 }
               }
             }
@@ -72,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "663ac79fa8b71783",
@@ -152,16 +151,24 @@
   },
   "active": "fe95d7c7b790bec1",
   "lastOpenFiles": [
-    "MinimumTimeWastingGraph.png",
-    "3 - Rete",
-    "3 - Rete/Protocolli di Instradamento/TopologiaRete.png",
-    "3 - Rete/Protocolli di Instradamento/SpanningTreeBroadcast.png",
-    "3 - Rete/Protocolli di Instradamento/PropagazioneInformazioneBellmanFord.png",
-    "3 - Rete/Protocolli di Instradamento/HierarchicOSPF.png",
-    "3 - Rete/Protocolli di Instradamento/BadNewsMrBellmanFord.png",
-    "3 - Rete/Protocolli di Instradamento/BGP.png",
-    "3 - Rete/Protocolli di Instradamento",
+    "Cabled Networks/Layouts/LCP.png",
+    "Cabled Networks/Layouts/EvenEvenConstruction.png",
+    "Cabled Networks/Layouts/ConfusingWiseButterfly.png",
+    "Cabled Networks/Layouts/NotSoWise.png",
+    "Cabled Networks/Layouts/OrthogonalCollinear.png",
+    "Cabled Networks/Routing",
+    "Cabled Networks/Layouts",
+    "Pasted image 20241005115446.png",
     "HowToNA.canvas",
+    "Cabled Networks/Butterfly/NodeDisjointLooping.png",
+    "Cabled Networks/Routing/MinimumTimeWastingGraph.png",
+    "Cabled Networks/Layouts/ForbiddenLayouts.png",
+    "Cabled Networks/Butterfly",
+    "Cabled Networks/Layouts/GraphCollinearized.png",
+    "Cabled Networks/Layouts/GraphToCollinearize.png",
+    "Cabled Networks",
+    "Cabled Networks/Routing/Reti di Elaboratori",
+    "Cabled Networks/Routing/Reti di Elaboratori/Protocolli di Instradamento",
     "Welcome.md"
   ]
 }
