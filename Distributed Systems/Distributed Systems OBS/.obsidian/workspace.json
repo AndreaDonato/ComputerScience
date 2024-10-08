@@ -15,9 +15,9 @@
               "state": {
                 "file": "HowToDS.canvas",
                 "viewState": {
-                  "x": 2495.331806429214,
-                  "y": 3233.578804534567,
-                  "zoom": 0.12333333333333378
+                  "x": 888.4242807030914,
+                  "y": 1847.3132758372756,
+                  "zoom": -0.19999999999999984
                 }
               }
             }
@@ -151,6 +151,12 @@
   },
   "active": "f3a0c3f78719f91c",
   "lastOpenFiles": [
+    "ChandyLamport.png",
+    "VectorClock.png",
+    "LamportClock.png",
+    "RequestAndCut.png",
+    "SchemaGenerale.png",
+    "SchemaGenerale.png",
     "Welcome.md",
     "HowToDS.canvas"
   ]
