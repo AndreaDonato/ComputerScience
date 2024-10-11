@@ -15,9 +15,9 @@
               "state": {
                 "file": "HowToDS.canvas",
                 "viewState": {
-                  "x": 2075.5665670423214,
-                  "y": 2124.5318193893304,
-                  "zoom": -1.2233333333333318
+                  "x": 1610.951077539028,
+                  "y": 3637.5224995444614,
+                  "zoom": -1.0000000000000009
                 }
               }
             }
@@ -72,8 +72,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "right": {
     "id": "4a86b1329927eb2b",
@@ -152,6 +151,7 @@
   },
   "active": "f3a0c3f78719f91c",
   "lastOpenFiles": [
+    "Paxos.png",
     "ChandyLamport.png",
     "VectorClock.png",
     "LamportClock.png",
