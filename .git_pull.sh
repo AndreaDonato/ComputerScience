@@ -3,8 +3,25 @@
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 git pull
 
+
+########################
+### per usare zenity ###
+########################
+
+export DISPLAY=:1
+# Consenti a root di accedere al display
+sudo -u shaytaan xhost +local:root
+# Consenti a shaytaan di vedere le notifiche di zenity
+xhost +local:shaytaan
+
+
+
+##############################
+### per gestire gli errori ###
+##############################
+
 if [ $? -ne 0 ]; then
-    # Se c'è stato un errore, mostra una finestra con Zenity con tre opzioni
+    # Se c'è stato un errore, mostra una finestra con zenity con tre opzioni
     scelta=$(zenity --list --title="Errore" \
         --text="Si è verificato un errore con il pull automatico, che succede?" \
         --column="Opzioni" "Riprova un pull automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Ferma il pull automatico fino al prossimo riavvio" --height=250 --width=300)
@@ -46,13 +63,16 @@ if [ $? -ne 0 ]; then
       	  	if [[ $? -ne 0 ]]; then
             	zenity --notification --text="Non è stato possibile interrompere il pull automatico."
             else
-   	            echo "Disabilito il pull automatico..."
+                zenity --notification --text="Servizi di pull automatico disabilitati fino al riavvio\nPer riavviarli adesso, systemctl start ..."
       	  	fi
             exit 1
             ;;
         *)
-            zenity --notification --text="Questa scelta equivale a selezionare 'Ignora l'errore'.\nNon ignorare i menù a tendina per favore."
+            zenity --notification --text="Questa scelta equivale a selezionare 'Ignora l'errore'\nNon ignorare i menù a tendina per favore"
             exit 1
             ;;
     esac
+
+else
+    zenity --notification --text="git pull daemon correctly executed"
 fi
