@@ -23,6 +23,7 @@ xhost +local:shaytaan
 
 if [ $? -ne 0 ]; then
     # Se c'è stato un errore, mostra una finestra con zenity con tre opzioni
+    echo "Qua dovrebbe aprirsi una finestra zenity"
     scelta=$(zenity --list --title="Errore" \
         --text="Si è verificato un errore con il pull automatico, che succede?" \
         --column="Opzioni" "Riprova un pull automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Ferma il pull automatico fino al prossimo riavvio" --height=250 --width=300)
