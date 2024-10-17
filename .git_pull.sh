@@ -13,10 +13,9 @@ sudo -u shaytaan xhost +local:root
 # Consenti a shaytaan di vedere le notifiche di zenity
 xhost +local:shaytaan
 
-#export DBUS_SESSION_BUS_ADDRESS=$(sudo -u shaytaan bash -c 'echo $DBUS_SESSION_BUS_ADDRESS')
-#export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
-
-export $(sudo -u shaytaan dbus-launch --sh-syntax)
+eval $(sudo -u shaytaan dbus-launch --sh-syntax)
+export DBUS_SESSION_BUS_ADDRESS
+export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
 
 git pull
 
