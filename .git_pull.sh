@@ -16,6 +16,7 @@ xhost +local:shaytaan
 #export DBUS_SESSION_BUS_ADDRESS=$(sudo -u shaytaan bash -c 'echo $DBUS_SESSION_BUS_ADDRESS')
 #export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
 
+export $(sudo -u shaytaan dbus-launch --sh-syntax)
 
 git pull
 
@@ -64,21 +65,21 @@ if [ $? -ne 0 ]; then
             echo "Ignoro l'errore e proseguo..."
             ;;
         "Ferma il pull automatico fino al prossimo riavvio")
-      	  	pkexec bash -c 'systemctl stop CS-git-pull.service && systemctl stop CS-git-pull-inotify.service'
+      	  	pkexec bash -c 'systemctl stop CS-git-pull.timer && systemctl stop CS-git-pull-inotify.service'
       	  	if [[ $? -ne 0 ]]; then
-            	zenity --notification --text="Non è stato possibile interrompere il pull automatico."
+            	notify-send "git pull daemon" "Non è stato possibile interrompere il pull automatico."
             else
-                zenity --notification --text="Servizi di pull automatico disabilitati fino al riavvio\nPer riavviarli adesso, systemctl start ..."
+                notify-send "git pull daemon" "Servizi di pull automatico disabilitati fino al riavvio\nPer riavviarli adesso, systemctl start ..."
       	  	fi
             exit 1
             ;;
         *)
-            zenity --notification --text="Questa scelta equivale a selezionare 'Ignora l'errore'\nNon ignorare i menù a tendina per favore"
+            notify-send "git pull daemon" "Questa scelta equivale a selezionare 'Ignora l'errore'\nNon ignorare i menù a tendina per favore"
             exit 1
             ;;
     esac
 
 else
     echo "Segue notifica zenity"
-    zenity --notification --text="git pull daemon correctly executed"
+    notify-send "git pull daemon" "no errors during git pull daemon execution"
 fi
