@@ -8,7 +8,7 @@ git pull
 ### per usare zenity ###
 ########################
 
-#export DISPLAY=:1
+export DISPLAY=:1
 # Consenti a root di accedere al display
 sudo -u shaytaan xhost +local:root
 # Consenti a shaytaan di vedere le notifiche di zenity
