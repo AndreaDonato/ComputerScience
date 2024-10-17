@@ -1,7 +1,6 @@
 #!/bin/bash
 
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
-git pull
 
 
 ########################
@@ -16,6 +15,10 @@ xhost +local:shaytaan
 
 #export DBUS_SESSION_BUS_ADDRESS=$(sudo -u shaytaan bash -c 'echo $DBUS_SESSION_BUS_ADDRESS')
 #export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
+
+
+git pull
+
 
 ##############################
 ### per gestire gli errori ###
@@ -76,5 +79,6 @@ if [ $? -ne 0 ]; then
     esac
 
 else
+    echo "Segue notifica zenity"
     zenity --notification --text="git pull daemon correctly executed"
 fi
