@@ -1,10 +1,6 @@
 #!/bin/bash
 
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
-git add .
-git commit -m "Automatic Commit"
-git push
-
 
 ########################
 ### per usare zenity ###
@@ -20,6 +16,12 @@ xhost +local:shaytaan
 # Questi non funzionano, non so perché
 #export DBUS_SESSION_BUS_ADDRESS=$(sudo -u shaytaan bash -c 'echo $DBUS_SESSION_BUS_ADDRESS')
 #export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
+
+
+git add .
+git commit -m "Automatic Commit"
+git push
+
 
 ##############################
 ### per gestire gli errori ###
@@ -65,6 +67,6 @@ if [ $? -ne 0 ]; then
     fi
 
 else
+    echo "Segue finestra zenity"
     zenity --notification --text="git push daemon correctly executed"
-
 fi
