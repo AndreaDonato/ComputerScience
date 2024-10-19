@@ -17,7 +17,7 @@ eval $(sudo -u shaytaan dbus-launch --sh-syntax)
 export DBUS_SESSION_BUS_ADDRESS
 export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
 
-sudo -u shaytaan git pull
+git pull
 
 
 ##############################
