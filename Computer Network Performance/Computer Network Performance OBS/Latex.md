@@ -1,0 +1,1 @@
+ $$\DeclarePairedDelimiter\ev{\langle}{\rangle} \ev*{x}$$
