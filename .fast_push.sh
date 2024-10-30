@@ -6,11 +6,11 @@ cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 ### per usare zenity ###
 ########################
 
-export DISPLAY=:1
+#export DISPLAY=:1
 #Consenti a root di accedere al display
-sudo -u shaytaan xhost +local:root
+#sudo -u shaytaan xhost +local:root
 # Consenti a shaytaan di vedere le notifiche di zenity
-xhost +local:shaytaan
+#xhost +local:shaytaan
 
 
 # Questi non funzionano, non so perché
