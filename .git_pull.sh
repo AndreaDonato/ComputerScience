@@ -1,21 +1,21 @@
 #!/bin/bash
 
-cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
+cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit 1
 
 
 ########################
 ### per usare zenity ###
 ########################
 
-export DISPLAY=:1
+#export DISPLAY=:1
 # Consenti a root di accedere al display
-sudo -u shaytaan xhost +local:root
+#sudo -u shaytaan xhost +local:root
 # Consenti a shaytaan di vedere le notifiche di zenity
-xhost +local:shaytaan
+#xhost +local:shaytaan
 
-eval $(sudo -u shaytaan dbus-launch --sh-syntax)
-export DBUS_SESSION_BUS_ADDRESS
-export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
+#eval $(sudo -u shaytaan dbus-launch --sh-syntax)
+#export DBUS_SESSION_BUS_ADDRESS
+#export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
 
 git pull
 
@@ -26,15 +26,16 @@ git pull
 
 if [ $? -ne 0 ]; then
     # Se c'è stato un errore, mostra una finestra con zenity con tre opzioni
-    echo "Qua dovrebbe aprirsi una finestra zenity"
+    echo "Si è verificato un errore con il pull automatico"
     scelta=$(zenity --list --title="Errore" \
         --text="Si è verificato un errore con il pull automatico, che succede?" \
-        --column="Opzioni" "Riprova un pull automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Ferma il pull automatico fino al prossimo riavvio" --height=250 --width=300)
+        --column="Opzioni" "Riprova un pull automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Interrompi la sincronizzazione" --height=250 --width=300)
 
     case $scelta in
         "Riprova un pull automatico")
-            echo "Riprovo il pull..."
+            echo "Riprovo il pull automatico..."
             ./.git_pull.sh
+            exit 0
             ;;
         "Apri un terminale per visualizzare l'errore")
 
@@ -59,17 +60,17 @@ if [ $? -ne 0 ]; then
 			else
     			echo "Impossibile trovare il file $pid_file."	# Non si sa mai
 			fi
+            exit 0
 			;;
         "Ignora l'errore")
             echo "Ignoro l'errore e proseguo..."
+            exit 0
             ;;
-        "Ferma il pull automatico fino al prossimo riavvio")
-      	  	pkexec bash -c 'systemctl stop CS-git-pull.timer && systemctl stop CS-git-pull-inotify.service'
-      	  	if [[ $? -ne 0 ]]; then
-            	notify-send "git pull daemon" "Non è stato possibile interrompere il pull automatico."
-            else
-                notify-send "git pull daemon" "Servizi di pull automatico disabilitati fino al riavvio\nPer riavviarli adesso, systemctl start ..."
-      	  	fi
+        "Interrompi la sincronizzazione")
+            notify-send "Ambiente di lavoro offline" "Sincronizza manualmente o lancia nuovamente il demone"
+      	  	#if [[ $? -ne 0 ]]; then
+            #else
+      	  	#fi
             exit 1
             ;;
         *)
@@ -79,6 +80,7 @@ if [ $? -ne 0 ]; then
     esac
 
 else
-    echo "Segue notifica zenity"
-    notify-send "git pull daemon" "no errors during git pull daemon execution"
+    echo "git pull daemon correctly executed"
+    notify-send "git pull daemon" "git pull daemon correctly executed"
+    exit 0
 fi

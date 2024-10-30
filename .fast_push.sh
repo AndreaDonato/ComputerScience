@@ -29,42 +29,58 @@ git push
 
 if [ $? -ne 0 ]; then
     # Se il codice di uscita non è zero, c'è stato un errore
-    echo "Errore durante il push al repository remoto. Si prega di controllare manualmente."
+    echo "Si è verificato un errore con il push automatico"
     # Qui puoi aprire una finestra con il messaggio di errore, ad esempio utilizzando Zenity
-    zenity --error --text="Errore durante il push al repository remoto. Si prega di controllare manualmente."
+    scelta=$(zenity --list --title="Errore" \
+        --text="Si è verificato un errore con il push automatico, che succede?" \
+        --column="Opzioni" "Riprova un push automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Interrompi la sincronizzazione" --height=250 --width=300)
 
-    # Visto che bash è un po' limitato, per aspettare un terminale aperto tramite gnome-terminal bisogna fare così:
-    pid_file="/tmp/git_push_terminal.pid"               # Creo un file temporaneo in cui salvare il pid del nuovo terminale
+    case $scelta in
+        "Riprova un push automatico")
+            echo "Riprovo il push automatico..."
+            ./.git_push.sh
+            ;;
+        "Apri un terminale per visualizzare l'errore")
 
-    # Eseguo un terminale che stampa il suo stesso PID sul file di cui sopra, poi fa quello che deve fare
-    gnome-terminal -- bash -c "echo \$\$ > '$pid_file'; cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit; git push; exec bash" &
-    sleep 1                                             # Gli serve un momento per fare tutta sta roba, il processore c'ha da fa
-    if [ -f "$pid_file" ]; then                         # Se il file temporaneo esiste
-        terminal_pid=$(<"$pid_file")                    # Leggi il PID dal file
+            # Visto che bash è un po' limitato, per aspettare un terminale aperto tramite gnome-terminal bisogna fare così:
+            pid_file="/tmp/git_push_terminal.pid"               # Creo un file temporaneo in cui salvare il pid del nuovo terminale
 
-        # La syscall wait non funziona se il processo da aspettare non è direttamente tuo figlio, quindi...
-        while true; do
-            if ! ps -p $terminal_pid > /dev/null; then
-                break  # Esci dal ciclo se il terminale è chiuso
+            # Eseguo un terminale che stampa il suo stesso PID sul file di cui sopra, poi fa quello che deve fare
+            gnome-terminal -- bash -c "echo \$\$ > '$pid_file'; cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit; git push; exec bash" &
+            sleep 1                                             # Gli serve un momento per fare tutta sta roba, il processore c'ha da fa
+            if [ -f "$pid_file" ]; then                         # Se il file temporaneo esiste
+                terminal_pid=$(<"$pid_file")                    # Leggi il PID dal file
+
+                # La syscall wait non funziona se il processo da aspettare non è direttamente tuo figlio, quindi...
+                while true; do
+                    if ! ps -p $terminal_pid > /dev/null; then
+                        break  # Esci dal ciclo se il terminale è chiuso
+                    fi
+                    sleep 1  # Aspetta 1 secondo prima di controllare di nuovo
+            done
+
+            rm -f "$pid_file"                                   # Rimuovi il file temporaneo
+            else
+                echo "Impossibile trovare il file $pid_file."   # Non si sa mai
             fi
-            sleep 1  # Aspetta 1 secondo prima di controllare di nuovo
-    done
-    rm -f "$pid_file"                                   # Rimuovi il file temporaneo
-    else
-        echo "Impossibile trovare il file $pid_file."   # Non si sa mai
-    fi
-
-    scelta=$(zenity --question --text="Se il problema non è stato risolto, puoi fermare i push automatici fino al prossimo riavvio" --ok-label="Ferma i push automatici" --cancel-label="Problema risolto!")
-
-    if [ $? -eq 0 ]; then
-        pkexec bash -c 'systemctl stop CS-git-push-inotify.service'
-        if [[ $? -ne 0 ]]; then
-            zenity --notification --text="Non è stato possibile interrompere il pull automatico."
-        else
-            zenity --notification --text="Servizi di pull automatico disabilitati fino al riavvio\nPer riavviarli adesso, systemctl start ..."
-        fi
-        exit 1
-    fi
+            ;;
+        "Ignora l'errore")
+            echo "Ignoro l'errore e proseguo..."
+            ;;
+        "Interrompi la sincronizzazione")
+            pkexec bash -c 'systemctl stop CS-git-push.timer && systemctl stop CS-git-push-inotify.service'
+            if [[ $? -ne 0 ]]; then
+                notify-send "git push daemon" "Non è stato possibile interrompere il push automatico."
+            else
+                notify-send "git push daemon" "Servizi di push automatico disabilitati fino al riavvio\nPer riavviarli adesso, systemctl start ..."
+            fi
+            exit 1
+            ;;
+        *)
+            notify-send "git push daemon" "Questa scelta equivale a selezionare 'Ignora l'errore'\nNon ignorare i menù a tendina per favore"
+            exit 1
+            ;;
+    esac
 
 else
     echo "Segue finestra zenity"
