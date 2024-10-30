@@ -38,7 +38,7 @@ if [ $? -ne 0 ]; then
     case $scelta in
         "Riprova un push automatico")
             echo "Riprovo il push automatico..."
-            ./.git_push.sh
+            git push
             ;;
         "Apri un terminale per visualizzare l'errore")
 
@@ -63,17 +63,15 @@ if [ $? -ne 0 ]; then
             else
                 echo "Impossibile trovare il file $pid_file."   # Non si sa mai
             fi
+            exit 1
             ;;
         "Ignora l'errore")
             echo "Ignoro l'errore e proseguo..."
+            exit 0
             ;;
         "Interrompi la sincronizzazione")
-            pkexec bash -c 'systemctl stop CS-git-push.timer && systemctl stop CS-git-push-inotify.service'
-            if [[ $? -ne 0 ]]; then
-                notify-send "git push daemon" "Non è stato possibile interrompere il push automatico."
-            else
-                notify-send "git push daemon" "Servizi di push automatico disabilitati fino al riavvio\nPer riavviarli adesso, systemctl start ..."
-            fi
+            notify-send "git push daemon" "Questo comando al momento non fa nulla"
+
             exit 1
             ;;
         *)
@@ -83,6 +81,7 @@ if [ $? -ne 0 ]; then
     esac
 
 else
-    echo "Segue finestra zenity"
+    echo "git push daemon correctly executed"
     zenity --notification --text="git push daemon correctly executed"
+    exit 0
 fi
