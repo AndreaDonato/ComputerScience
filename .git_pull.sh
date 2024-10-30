@@ -2,40 +2,23 @@
 
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 
-
-########################
-### per usare zenity ###
-########################
-
-#export DISPLAY=:1
-# Consenti a root di accedere al display
-#sudo -u shaytaan xhost +local:root
-# Consenti a shaytaan di vedere le notifiche di zenity
-#xhost +local:shaytaan
-
-#eval $(sudo -u shaytaan dbus-launch --sh-syntax)
-#export DBUS_SESSION_BUS_ADDRESS
-#export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
-notify-send "git pull daemon" "executing git pull..."
 git pull
-notify-send "git pull daemon" "git pull executed"
-
 
 ##############################
 ### per gestire gli errori ###
 ##############################
 
 if [ $? -ne 0 ]; then
-    # Se c'è stato un errore, mostra una finestra con zenity con tre opzioni
+    # Se il codice di uscita non è zero, c'è stato un errore
     echo "Si è verificato un errore con il pull automatico"
     scelta=$(zenity --list --title="Errore" \
         --text="Si è verificato un errore con il pull automatico, che succede?" \
-        --column="Opzioni" "Riprova un pull automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Interrompi la sincronizzazione" --height=250 --width=300)
+        --column="Opzioni" "Riprova un pull automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Apri le impostazioni di sincronizzazione" --height=250 --width=300)
 
     case $scelta in
         "Riprova un pull automatico")
             echo "Riprovo il pull automatico..."
-            ./.git_pull.sh
+            ./.git_pull.sh &
             exit 0
             ;;
         "Apri un terminale per visualizzare l'errore")
@@ -67,12 +50,8 @@ if [ $? -ne 0 ]; then
             echo "Ignoro l'errore e proseguo..."
             exit 0
             ;;
-        "Interrompi la sincronizzazione")
-            notify-send "git pull daemon" "Questo comando al momento non fa nulla"
-            #notify-send "Ambiente di lavoro offline" "Sincronizza manualmente o lancia nuovamente il demone"
-      	  	#if [[ $? -ne 0 ]]; then
-            #else
-      	  	#fi
+        "Apri le impostazioni di sincronizzazione")
+            /home/shaytaan/Desktop/sync.sh &
             exit 1
             ;;
         *)

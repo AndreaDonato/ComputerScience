@@ -30,15 +30,15 @@ git push
 if [ $? -ne 0 ]; then
     # Se il codice di uscita non è zero, c'è stato un errore
     echo "Si è verificato un errore con il push automatico"
-    # Qui puoi aprire una finestra con il messaggio di errore, ad esempio utilizzando Zenity
     scelta=$(zenity --list --title="Errore" \
         --text="Si è verificato un errore con il push automatico, che succede?" \
-        --column="Opzioni" "Riprova un push automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Interrompi la sincronizzazione" --height=250 --width=300)
+        --column="Opzioni" "Riprova un push automatico" "Apri un terminale per visualizzare l'errore" "Ignora l'errore" "Apri le impostazioni di sincronizzazione" --height=250 --width=300)
 
     case $scelta in
         "Riprova un push automatico")
             echo "Riprovo il push automatico..."
-            git push
+            ./.fast_push.sh &
+            exit 0
             ;;
         "Apri un terminale per visualizzare l'errore")
 
@@ -69,9 +69,9 @@ if [ $? -ne 0 ]; then
             echo "Ignoro l'errore e proseguo..."
             exit 0
             ;;
-        "Interrompi la sincronizzazione")
-            notify-send "git push daemon" "Questo comando al momento non fa nulla"
-
+        "Apri le impostazioni di sincronizzazione")
+            #notify-send "git push daemon" "Questo comando al momento non fa nulla"
+            /home/shaytaan/Desktop/sync.sh &
             exit 1
             ;;
         *)
@@ -82,6 +82,6 @@ if [ $? -ne 0 ]; then
 
 else
     echo "git push daemon correctly executed"
-    zenity --notification --text="git push daemon correctly executed"
+    notify-send "git push daemon" "git push daemon correctly executed"
     exit 0
 fi

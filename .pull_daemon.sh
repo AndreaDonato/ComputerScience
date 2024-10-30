@@ -1,11 +1,7 @@
 #!/bin/bash
 
-export DISPLAY=:1
-export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
-
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
-notify-send "git pull daemon" "GIT PULL DEAMON"
-echo "ciao"
+
 # Inizializza la variabile per tenere traccia dell'ultimo esecuzione
 last_run=0
 
