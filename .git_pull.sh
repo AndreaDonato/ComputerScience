@@ -1,6 +1,6 @@
 #!/bin/bash
 
-cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit 1
+cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 
 
 ########################
@@ -16,8 +16,9 @@ cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit 1
 #eval $(sudo -u shaytaan dbus-launch --sh-syntax)
 #export DBUS_SESSION_BUS_ADDRESS
 #export XDG_RUNTIME_DIR=$(sudo -u shaytaan bash -c 'echo $XDG_RUNTIME_DIR')
-
+notify-send "git pull daemon" "executing git pull..."
 git pull
+notify-send "git pull daemon" "git pull executed"
 
 
 ##############################
@@ -67,7 +68,8 @@ if [ $? -ne 0 ]; then
             exit 0
             ;;
         "Interrompi la sincronizzazione")
-            notify-send "Ambiente di lavoro offline" "Sincronizza manualmente o lancia nuovamente il demone"
+            notify-send "git pull daemon" "Questo comando al momento non fa nulla"
+            #notify-send "Ambiente di lavoro offline" "Sincronizza manualmente o lancia nuovamente il demone"
       	  	#if [[ $? -ne 0 ]]; then
             #else
       	  	#fi
