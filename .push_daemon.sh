@@ -2,21 +2,6 @@
 
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 
-
-
-# inotifywait ha la brutta abitudine di creare copie dello script che lo lancia, quindi implemento un controllo per evitare processi duplicati
-PUSHPIDFILE="/tmp/push.pid"
-
-# Se esiste già un PID termina
-if [ -e "$PUSHPIDFILE" ]; then
-    exit 1
-else
-    # Salva il proprio PID
-    echo $$ > "$PUSHPIDFILE"
-fi
-
-
-
 # Inizializza la variabile per tenere traccia dell'ultimo esecuzione
 last_run=0
 
