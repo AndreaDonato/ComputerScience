@@ -1,5 +1,5 @@
 
-Attenzione! Qua ci stanno le macro di LaTeX con relativa sintassi. Non toccare.
+Macro LaTeX con relativa sintassi.
 
 # Alfabeto Greco
 
