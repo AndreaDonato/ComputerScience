@@ -2,25 +2,19 @@
 
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 
+
+
 # inotifywait ha la brutta abitudine di creare copie dello script che lo lancia, quindi implemento un controllo per evitare processi duplicati
 PIDFILE="/tmp/push.pid"
 
-
-if [ -f $PIDFILE ]; then
-    read -r stored_pid < "$PIDFILE"
+# Se esiste già un PID termina
+if [ -e "$PIDFILE" ]; then
+    exit 1
 else
-    echo "Il file $PIDFILE non esiste."
-    exit 1
+    # Salva il proprio PID
+    echo $$ > "$PIDFILE"
 fi
 
-# Ottieni il PID del processo corrente
-current_pid=$$
-
-# Controlla se il PID memorizzato è diverso dal PID corrente
-if [ "$stored_pid" -ne "$current_pid" ]; then
-    echo "Il PID nel file è diverso dal PID corrente. Uscita..."
-    exit 1
-fi
 
 
 # Inizializza la variabile per tenere traccia dell'ultimo esecuzione
