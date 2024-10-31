@@ -45,3 +45,4 @@ $$
 - `\bra`, `\ket` - Notazione <bra|ket>:$$\newcommand{\bra}{\langle}\newcommand{\ket}{\rangle}\bra x|y\ket = \sum_ix_iy_i$$
 
 - `\so` - Non mi va di scrivere \Rightarrow:$$\newcommand{\so}{\Rightarrow}x\so y$$
+
