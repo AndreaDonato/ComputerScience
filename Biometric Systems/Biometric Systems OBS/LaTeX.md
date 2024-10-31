@@ -46,3 +46,4 @@ $$
 
 - `\so` - Non mi va di scrivere \Rightarrow:$$\newcommand{\so}{\Rightarrow}x\so y$$
 
+- Altro h
