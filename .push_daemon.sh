@@ -5,14 +5,14 @@ cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 
 
 # inotifywait ha la brutta abitudine di creare copie dello script che lo lancia, quindi implemento un controllo per evitare processi duplicati
-PIDFILE="/tmp/push.pid"
+PUSHPIDFILE="/tmp/push.pid"
 
 # Se esiste già un PID termina
-if [ -e "$PIDFILE" ]; then
+if [ -e "$PUSHPIDFILE" ]; then
     exit 1
 else
     # Salva il proprio PID
-    echo $$ > "$PIDFILE"
+    echo $$ > "$PUSHPIDFILE"
 fi
 
 
