@@ -3,19 +3,25 @@
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 
 # inotifywait ha la brutta abitudine di creare copie dello script che lo lancia, quindi implemento un controllo per evitare processi duplicati
-LOCKFILE="/tmp/push_daemon.lock"
+PIDFILE="/tmp/push.pid"
 
-# Controlla se il lockfile esiste
-if [ -e "$LOCKFILE" ]; then
-    echo "Lo script è già in esecuzione."
+
+if [ -f $PIDFILE ]; then
+    read -r stored_pid < "$PIDFILE"
+else
+    echo "Il file $PIDFILE non esiste."
     exit 1
 fi
 
-# Crea un lockfile
-touch "$LOCKFILE"
+# Ottieni il PID del processo corrente
+current_pid=$$
 
-# Assicurati di rimuovere il lockfile al termine
-trap 'rm -f "$LOCKFILE"; exit' INT TERM EXIT
+# Controlla se il PID memorizzato è diverso dal PID corrente
+if [ "$stored_pid" -ne "$current_pid" ]; then
+    echo "Il PID nel file è diverso dal PID corrente. Uscita..."
+    exit 1
+fi
+
 
 # Inizializza la variabile per tenere traccia dell'ultimo esecuzione
 last_run=0
@@ -30,6 +36,3 @@ inotifywait -m -r -e modify,close_write,create,delete /home/shaytaan/Desktop/int
         last_run=$current_time  # Aggiorna il tempo dell'ultima esecuzione
     fi
 done
-
-# Rimuovi il lockfile quando lo script termina
-rm -f "$LOCKFILE"
