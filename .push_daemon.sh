@@ -2,16 +2,34 @@
 
 cd /home/shaytaan/Desktop/int\ main/ComputerScience/ || exit
 
+# inotifywait ha la brutta abitudine di creare copie dello script che lo lancia, quindi implemento un controllo per evitare processi duplicati
+LOCKFILE="/tmp/push_daemon.lock"
+
+# Controlla se il lockfile esiste
+if [ -e "$LOCKFILE" ]; then
+    echo "Lo script è già in esecuzione."
+    exit 1
+fi
+
+# Crea un lockfile
+touch "$LOCKFILE"
+
+# Assicurati di rimuovere il lockfile al termine
+trap 'rm -f "$LOCKFILE"; exit' INT TERM EXIT
+
 # Inizializza la variabile per tenere traccia dell'ultimo esecuzione
 last_run=0
 
 inotifywait -m -r -e modify,close_write,create,delete /home/shaytaan/Desktop/int\ main/ComputerScience | while read -r directory events filename; do
+
     current_time=$(date +%s)  # Ottieni il tempo attuale in secondi dall'epoca
     # Controlla se sono trascorsi 600 secondi (10 minuti) dall'ultima esecuzione
     if (( current_time - last_run >= 600 )); then
         sleep 30
-        notify-send "git push daemon" "calling git_push..."
         ./.fast_push.sh
         last_run=$current_time  # Aggiorna il tempo dell'ultima esecuzione
     fi
 done
+
+# Rimuovi il lockfile quando lo script termina
+rm -f "$LOCKFILE"
