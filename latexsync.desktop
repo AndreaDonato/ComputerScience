@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=LaTeXSync Launcher
+Comment=Esegui LatexSync
+Exec=/home/shaytaan/Desktop/latexsync.sh
+Icon=utilities-terminal
+Terminal=false
+Type=Application

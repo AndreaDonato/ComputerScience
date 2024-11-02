@@ -1,0 +1,8 @@
+[Desktop Entry]
+Version=1.0
+Name=Workspace Launcher
+Comment=Esegui sync.sh
+Exec=/home/shaytaan/Desktop/sync.sh
+Icon=utilities-terminal
+Terminal=false
+Type=Application
