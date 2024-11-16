@@ -32,9 +32,10 @@ $$
 # Insiemi
 
 - `\NPC` - Un modo civile per scrivere NP-Complete$$\newcommand{\NPC}{\mathbb{NP}\text{-}\mathbf{Complete}}\NPC$$
+- `\NPH` - E uno per scrivere NP-Hard$$\newcommand{\NPH}{\mathbb{NP}\text{-}\mathbf{Hard}}\NPH$$
 - `N`, `\R`, `\P`, `\NP` - E per scrivere gli altri insiemi notevoli$$\newcommand{\N}{\mathbb{N}}\newcommand{\R}{\mathbb{R}}\newcommand{\P}{\mathbb{P}}\newcommand{\NP}{\mathbb{NP}}\N,\R,\P,\NP$$
 - `\ss`, `\sse` - Non mi va di scrivere `\subset` e `\subseteq`$$\newcommand{\ss}{\subset}\newcommand{\sse}{\subseteq}A\ss B\quad C\sse D$$
-
+- `\calN`, `\calX` - Varianti `\mathcal` per alcune lettere usate a volte per gli insiemi$$\newcommand{\calN}{\mathcal{N}}\newcommand{\calX}{\mathcal{X}}\calN\calX$$
 
 # Utility
 
@@ -51,3 +52,4 @@ $$
 
 - `\dist` - Non mi va di scrivere `\text{dist}` per la distanza:$$\newcommand{\dist}{\text{dist}}\dist(u,v)$$
 - `\uD`, `\dD`, `\tD` - Preferisco scrivere il numero di dimensioni come `\text{1D}`, probabilmente perché sono autistico:$$\newcommand{\uD}{\text{1D}}\newcommand{\dD}{\text{2D}}\newcommand{\tD}{\text{3D}}\uD,\,\dD,\,\tD$$
+- `\PCH`, `\SCH` - Primo e Secondo Canale$$\newcommand{\PCH}{\text{CH}_1}\PCH\newcommand{\SCH}{\text{CH}_2}\SCH$$
