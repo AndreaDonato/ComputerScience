@@ -3,7 +3,7 @@ Macro LaTeX con relativa sintassi.
 
 # Alfabeto Greco
 
-Ogni lettera dell'alfabeto greco è la "corrispondente" lettera latina (e.g. `\b` = `\beta`)
+Quasi ogni lettera dell'alfabeto greco è la "corrispondente" lettera latina (e.g. `\b` = `\beta`). Ne restano escluse quelle già molto corte (e.g. `\pi` e `\Pi` restano così) e quelle uguali ai caratteri latini (che tanto non ci sono neanche in LaTeX, per ovvi motivi).
 
 $$
 \newcommand{\a}{\alpha}\a
@@ -29,13 +29,44 @@ $$
 \newcommand{\O}{\Omega}\O
 $$
 
+# Varianti \mathcal
+
+Ogni lettera maiuscola ha una variante `\mathcal{X}` scrivibile come `\calX`
+$$
+\newcommand{\calA}{\mathcal{A}}\calA
+\newcommand{\calB}{\mathcal{B}}\calB
+\newcommand{\calC}{\mathcal{C}}\calC
+\newcommand{\calD}{\mathcal{D}}\calD
+\newcommand{\calE}{\mathcal{E}}\calE
+\newcommand{\calF}{\mathcal{F}}\calF
+\newcommand{\calG}{\mathcal{G}}\calG
+\newcommand{\calH}{\mathcal{H}}\calH
+\newcommand{\calI}{\mathcal{I}}\calI
+\newcommand{\calJ}{\mathcal{J}}\calJ
+\newcommand{\calK}{\mathcal{K}}\calK
+\newcommand{\calL}{\mathcal{L}}\calL
+\newcommand{\calM}{\mathcal{M}}\calM
+\newcommand{\calN}{\mathcal{N}}\calN
+\newcommand{\calO}{\mathcal{O}}\calO
+\newcommand{\calP}{\mathcal{P}}\calP
+\newcommand{\calQ}{\mathcal{Q}}\calQ
+\newcommand{\calR}{\mathcal{R}}\calR
+\newcommand{\calS}{\mathcal{S}}\calS
+\newcommand{\calT}{\mathcal{T}}\calT
+\newcommand{\calU}{\mathcal{U}}\calU
+\newcommand{\calV}{\mathcal{V}}\calV
+\newcommand{\calX}{\mathcal{X}}\calX
+\newcommand{\calY}{\mathcal{Y}}\calY
+\newcommand{\calZ}{\mathcal{Z}}\calZ
+$$
+
+
 # Insiemi
 
 - `\NPC` - Un modo civile per scrivere NP-Complete$$\newcommand{\NPC}{\mathbb{NP}\text{-}\mathbf{Complete}}\NPC$$
 - `\NPH` - E uno per scrivere NP-Hard$$\newcommand{\NPH}{\mathbb{NP}\text{-}\mathbf{Hard}}\NPH$$
 - `N`, `\R`, `\P`, `\NP` - E per scrivere gli altri insiemi notevoli$$\newcommand{\N}{\mathbb{N}}\newcommand{\R}{\mathbb{R}}\newcommand{\P}{\mathbb{P}}\newcommand{\NP}{\mathbb{NP}}\N,\R,\P,\NP$$
 - `\ss`, `\sse` - Non mi va di scrivere `\subset` e `\subseteq`$$\newcommand{\ss}{\subset}\newcommand{\sse}{\subseteq}A\ss B\quad C\sse D$$
-- `\calN`, `\calX` - Varianti `\mathcal` per alcune lettere usate a volte per gli insiemi$$\newcommand{\calN}{\mathcal{N}}\newcommand{\calX}{\mathcal{X}}\calN\calX$$
 
 # Utility
 
