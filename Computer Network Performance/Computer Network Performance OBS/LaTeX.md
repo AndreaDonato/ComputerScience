@@ -55,10 +55,12 @@ $$
 \newcommand{\calT}{\mathcal{T}}\calT
 \newcommand{\calU}{\mathcal{U}}\calU
 \newcommand{\calV}{\mathcal{V}}\calV
+\newcommand{\calW}{\mathcal{W}}\calW
 \newcommand{\calX}{\mathcal{X}}\calX
 \newcommand{\calY}{\mathcal{Y}}\calY
 \newcommand{\calZ}{\mathcal{Z}}\calZ
 $$
+
 
 
 # Insiemi
