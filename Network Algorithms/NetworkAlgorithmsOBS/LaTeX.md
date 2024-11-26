@@ -86,3 +86,4 @@ $$
 - `\dist` - Non mi va di scrivere `\text{dist}` per la distanza:$$\newcommand{\dist}{\text{dist}}\dist(u,v)$$
 - `\uD`, `\dD`, `\tD` - Preferisco scrivere il numero di dimensioni come `\text{1D}`, probabilmente perché sono autistico:$$\newcommand{\uD}{\text{1D}}\newcommand{\dD}{\text{2D}}\newcommand{\tD}{\text{3D}}\uD,\,\dD,\,\tD$$
 - `\PCH`, `\SCH` - Primo e Secondo Canale$$\newcommand{\PCH}{\text{CH}_1}\PCH\newcommand{\SCH}{\text{CH}_2}\SCH$$
+- `\BTC`, `\ETH` - Un modo più carino di scrivere Bitcoin ed Ethereum$$\newcommand{\BTC}{\mathsf{BTC}}\BTC\quad\newcommand{\ETH}{\mathsf{ETH}}\ETH$$
