@@ -1,0 +1,89 @@
+
+Macro LaTeX con relativa sintassi.
+
+# Alfabeto Greco
+
+Quasi ogni lettera dell'alfabeto greco è la "corrispondente" lettera latina (e.g. `\b` = `\beta`). Ne restano escluse quelle già molto corte (e.g. `\pi` e `\Pi` restano così) e quelle uguali ai caratteri latini (che tanto non ci sono neanche in LaTeX, per ovvi motivi).
+
+$$
+\newcommand{\a}{\alpha}\a
+\newcommand{\b}{\beta}\b
+\newcommand{\g}{\gamma}\g
+\newcommand{\G}{\Gamma}\G
+\newcommand{\d}{\delta}\d
+\newcommand{\D}{\Delta}\D
+\newcommand{\e}{\varepsilon}\e
+\newcommand{\z}{\zeta}\z
+\newcommand{\th}{\vartheta}\th
+\newcommand{\T}{\Theta}\T
+\newcommand{\l}{\lambda}\l
+\newcommand{\L}{\Lambda}\L
+\newcommand{\r}{\rho}\r
+\newcommand{\s}{\sigma}\s
+\newcommand{\S}{\Sigma}\S
+\newcommand{\t}{\tau}\t
+\newcommand{\f}{\phi}\f
+\newcommand{\F}{\Phi}\F
+\newcommand{\c}{\chi}\c
+\newcommand{\o}{\omega}\o
+\newcommand{\O}{\Omega}\O
+$$
+
+# Varianti \mathcal
+
+Ogni lettera maiuscola ha una variante `\mathcal{X}` scrivibile come `\calX`
+$$
+\newcommand{\calA}{\mathcal{A}}\calA
+\newcommand{\calB}{\mathcal{B}}\calB
+\newcommand{\calC}{\mathcal{C}}\calC
+\newcommand{\calD}{\mathcal{D}}\calD
+\newcommand{\calE}{\mathcal{E}}\calE
+\newcommand{\calF}{\mathcal{F}}\calF
+\newcommand{\calG}{\mathcal{G}}\calG
+\newcommand{\calH}{\mathcal{H}}\calH
+\newcommand{\calI}{\mathcal{I}}\calI
+\newcommand{\calJ}{\mathcal{J}}\calJ
+\newcommand{\calK}{\mathcal{K}}\calK
+\newcommand{\calL}{\mathcal{L}}\calL
+\newcommand{\calM}{\mathcal{M}}\calM
+\newcommand{\calN}{\mathcal{N}}\calN
+\newcommand{\calO}{\mathcal{O}}\calO
+\newcommand{\calP}{\mathcal{P}}\calP
+\newcommand{\calQ}{\mathcal{Q}}\calQ
+\newcommand{\calR}{\mathcal{R}}\calR
+\newcommand{\calS}{\mathcal{S}}\calS
+\newcommand{\calT}{\mathcal{T}}\calT
+\newcommand{\calU}{\mathcal{U}}\calU
+\newcommand{\calV}{\mathcal{V}}\calV
+\newcommand{\calW}{\mathcal{W}}\calW
+\newcommand{\calX}{\mathcal{X}}\calX
+\newcommand{\calY}{\mathcal{Y}}\calY
+\newcommand{\calZ}{\mathcal{Z}}\calZ
+$$
+
+
+
+# Insiemi
+
+- `\NPC` - Un modo civile per scrivere NP-Complete$$\newcommand{\NPC}{\mathbb{NP}\text{-}\mathbf{Complete}}\NPC$$
+- `\NPH` - E uno per scrivere NP-Hard$$\newcommand{\NPH}{\mathbb{NP}\text{-}\mathbf{Hard}}\NPH$$
+- `N`, `\R`, `\P`, `\NP` - E per scrivere gli altri insiemi notevoli$$\newcommand{\N}{\mathbb{N}}\newcommand{\R}{\mathbb{R}}\newcommand{\P}{\mathbb{P}}\newcommand{\NP}{\mathbb{NP}}\N,\R,\P,\NP$$
+- `\ss`, `\sse` - Non mi va di scrivere `\subset` e `\subseteq`$$\newcommand{\ss}{\subset}\newcommand{\sse}{\subseteq}A\ss B\quad C\sse D$$
+
+# Utility
+
+- Parentesi per le funzioni `\floor` e `\ceiling`:$$
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+    \floor*{\frac{x}{2}} \leq \frac{x}{2} \leq \ceil*{\frac{x}{2}}
+$$
+- `\bra`, `\ket` - Notazione `<bra|ket>`:$$\newcommand{\bra}{\langle}\newcommand{\ket}{\rangle}\bra x|y\ket = \sum_ix_iy_i$$
+
+- `\so` - Non mi va di scrivere `\Rightarrow`:$$\newcommand{\so}{\Rightarrow}x\so y$$
+
+# Varie
+
+- `\dist` - Non mi va di scrivere `\text{dist}` per la distanza:$$\newcommand{\dist}{\text{dist}}\dist(u,v)$$
+- `\uD`, `\dD`, `\tD` - Preferisco scrivere il numero di dimensioni come `\text{1D}`, probabilmente perché sono autistico:$$\newcommand{\uD}{\text{1D}}\newcommand{\dD}{\text{2D}}\newcommand{\tD}{\text{3D}}\uD,\,\dD,\,\tD$$
+- `\PCH`, `\SCH` - Primo e Secondo Canale$$\newcommand{\PCH}{\text{CH}_1}\PCH\newcommand{\SCH}{\text{CH}_2}\SCH$$
+- `\BTC`, `\ETH` - Un modo più carino di scrivere Bitcoin ed Ethereum$$\newcommand{\BTC}{\mathsf{BTC}}\BTC\quad\newcommand{\ETH}{\mathsf{ETH}}\ETH$$
