@@ -81,7 +81,8 @@ $$
 
 - `\so` - Non mi va di scrivere `\Rightarrow`:$$\newcommand{\so}{\Rightarrow}x\so y$$
 -  `\impose` - Voglio un modo rapido per scrivere `\stackrel{!}{=}`$$\newcommand{\impose}{\stackrel{!}{=}}\impose$$
-
+- `\meanx` - Vorrei evitare di scrivere ogni volta `\overline{x}` (ed altri, tipo `y`, se serve)$$\newcommand{\meanx}{\overline{x}}\meanx\newcommand{\meany}{\overline{y}}\meany$$
+- `\E` - Per scrivere rapidamente l'operatore valore atteso$$\newcommand{\E}{\mathbb{E}}\E$$
 # Varie
 
 - `\dist` - Non mi va di scrivere `\text{dist}` per la distanza:$$\newcommand{\dist}{\text{dist}}\dist(u,v)$$
