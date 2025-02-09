@@ -116,7 +116,11 @@
 		{"id":"4ffa6f5f80df423d","type":"text","text":"# Temporal Difference Learning (TDL)\n\nPer TDL si intende una ***famiglia di algoritmi*** che aggiornano il valore stimato di un valore basandosi su esperienze parziali, senza quindi attendere un'osservazione \"completa\".\n\nL'idea è la seguente: dato uno stato ho una stima del suo valore, dopodiché però posso osservare le conseguenze delle mie azioni e confrontarle con ciò che mi aspettavo, aggiornando in modo dinamico la mia stima secondo il ***TD Error***$$\\d_t=\\calR_t+\\g V(s_{t+1})-V(s_t)$$Se $\\d_t$ supera una certa threshold, allora aggiorno la stima $V(s_t)$.\n\nIl ***Q-Learning*** è un caso specifico di TDL.","x":-5938,"y":4339,"width":759,"height":351,"color":"4"},
 		{"id":"cc2e203d8407499d","type":"text","text":"# Papers","x":-330,"y":6440,"width":759,"height":229,"color":"6"},
 		{"id":"5c9a173d23378970","type":"text","text":"# Questo Corso\n\nDato un networking problem (MAC o routing), devi essere in grado di decidere se sia o meno il caso di formularlo come problema di reinforcement learning.\n\nIn caso affermativo, devi definirlo formalmente (in termini di state space, action space, dynamics e reward model), stabilire quale tra gli algoritmi visti a lezione è più adatto per il problema e argomentare per quale motivo lo è.\n","x":-330,"y":-715,"width":759,"height":229,"color":"3"},
-		{"id":"6ae7f80816be5460","x":-2120,"y":6440,"width":759,"height":440,"type":"text","text":"# Aloha-Q (2015)\n\nProtocollo MAC per WSN che usa il $Q$***-Learning*** per ottimizzare la scelta degli slot in Aloha.\n\nConosciamo già i problemi di Aloha classico: collisioni, ritrasmissioni (quindi overhead), idle listening e overhearing (i.e. manca una coordinazione). Ci sono già protocolli che migliorano l'efficienza energetica (i.e. S-MAC, Z-MAC), ma questi introducono più complessità ed overhead. \n\n- Ogni nodo mantiene "}
+		{"id":"6ae7f80816be5460","type":"text","text":"# Aloha-Q (2015)\n\nProtocollo MAC per WSN che usa il $Q$***-Learning*** per ottimizzare la scelta degli slot in Aloha.\n\nConosciamo già i problemi di Aloha classico: collisioni, ritrasmissioni (quindi overhead), idle listening e overhearing (i.e. manca una coordinazione). Ci sono già protocolli che migliorano l'efficienza energetica (i.e. S-MAC, Z-MAC), ma questi introducono più complessità ed overhead. \n\n- Ogni nodo mantiene ","x":-1840,"y":6335,"width":759,"height":440},
+		{"id":"a9710cd0cf1a0dfb","x":-1010,"y":7401,"width":250,"height":60,"type":"text","text":""},
+		{"id":"021d1cc671feb903","x":-72,"y":7490,"width":250,"height":60,"type":"text","text":""},
+		{"id":"0073c9a1077332fd","x":849,"y":7463,"width":250,"height":60,"type":"text","text":""},
+		{"id":"93e5b042945237b3","x":1014,"y":6521,"width":250,"height":60,"type":"text","text":""}
 	],
 	"edges":[
 		{"id":"ba08de2f1f873a71","fromNode":"4b21c821ca9a99a5","fromSide":"top","toNode":"496569cc5d17f5be","toSide":"bottom"},
@@ -235,6 +239,10 @@
 		{"id":"4203b6b1366dd753","fromNode":"1ef815baa057d8c0","fromSide":"right","toNode":"91f40e79bcda272c","toSide":"left"},
 		{"id":"60a52a434dd267ff","fromNode":"1ef815baa057d8c0","fromSide":"left","toNode":"4ffa6f5f80df423d","toSide":"right"},
 		{"id":"8158c1e1c26aabe2","fromNode":"2795cbd69099d104","fromSide":"bottom","toNode":"cc2e203d8407499d","toSide":"top"},
-		{"id":"bde3eb639a93427d","fromNode":"cc2e203d8407499d","fromSide":"left","toNode":"6ae7f80816be5460","toSide":"right"}
+		{"id":"bde3eb639a93427d","fromNode":"cc2e203d8407499d","fromSide":"left","toNode":"6ae7f80816be5460","toSide":"right"},
+		{"id":"5e23db2ab26de288","fromNode":"cc2e203d8407499d","fromSide":"bottom","toNode":"a9710cd0cf1a0dfb","toSide":"top"},
+		{"id":"fa00ade586e344b2","fromNode":"cc2e203d8407499d","fromSide":"bottom","toNode":"021d1cc671feb903","toSide":"top"},
+		{"id":"12a832791ca02b68","fromNode":"cc2e203d8407499d","fromSide":"bottom","toNode":"0073c9a1077332fd","toSide":"top"},
+		{"id":"4d8968edaf06638b","fromNode":"cc2e203d8407499d","fromSide":"right","toNode":"93e5b042945237b3","toSide":"left"}
 	]
 }
