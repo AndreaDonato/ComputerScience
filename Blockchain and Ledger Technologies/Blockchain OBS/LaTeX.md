@@ -90,3 +90,4 @@ $$
 - `\PCH`, `\SCH` - Primo e Secondo Canale$$\newcommand{\PCH}{\text{CH}_1}\PCH\newcommand{\SCH}{\text{CH}_2}\SCH$$
 - `\BTC`, `\ETH` - Un modo più carino di scrivere Bitcoin ed Ethereum$$\newcommand{\BTC}{\mathsf{BTC}}\BTC\quad\newcommand{\ETH}{\mathsf{ETH}}\ETH$$
 - `\bit` - Devo distinguere tra $\mathsf{bit}$ informativo e `bit` fisico$$\newcommand{\bit}{\mathsf{bit}}\bit$$
+- `\SNR` - Signal to Noise Ratio$$\newcommand{\SNR}{\mathsf{SNR}}\SNR$$
