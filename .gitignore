@@ -1,1 +1,7 @@
+# Avoid useless conflicts on Obsidian Canvas view
 **/workspace.json
+
+# Do not share private informations
+**/*.ovpn
+**/*.crt
+**/*.key
