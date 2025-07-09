@@ -1,0 +1,27 @@
+00:00:01.782588 VirtualBox VM 7.1.6 r167084 linux.amd64 (Jan 21 2025 14:06:34) release log
+00:00:01.782592 Log opened 2025-07-08T17:40:58.632230000Z
+00:00:01.782593 Build Type: release
+00:00:01.782595 OS Product: Linux
+00:00:01.782596 OS Release: 6.8.0-60-generic
+00:00:01.782598 OS Version: #63~22.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue Apr 22 19:00:15 UTC 2
+00:00:01.782631 DMI Product Name: MS-7D25
+00:00:01.782645 DMI Product Version: 1.0
+00:00:01.782653 Firmware type: UEFI
+00:00:01.782878 Secure Boot: Disabled
+00:00:01.782935 Host RAM: 31881MB (31.1GB) total, 25899MB (25.2GB) available
+00:00:01.782939 Executable: /usr/lib/virtualbox/VirtualBoxVM
+00:00:01.782939 Process ID: 50096
+00:00:01.782940 Package type: LINUX_64BITS_UBUNTU_22_04
+00:00:01.786010 Installed Extension Packs:
+00:00:01.786029   None installed!
+00:00:01.786711 Console: Machine state changed to 'Starting'
+00:00:01.786889 GUI: Qt version: 6.5.3
+00:00:01.786897 GUI: X11 Window Manager code: 2
+00:00:01.786898 GUI: HID LEDs sync is not supported on this platform
+00:00:01.791667 Console: Machine state changed to 'PoweredOff'
+00:00:01.797426 Power up failed (vrc=VINF_SUCCESS, hrc=NS_ERROR_FAILURE (0X80004005))
+00:00:02.299924 GUI: Aborting startup due to power up progress issue detected...
+00:00:02.304813 X Server details: vendor: The X.Org Foundation, release: 12101004, protocol version: 11.0, display string: :1
+00:00:02.304861 Using XKB for keycode to scan code conversion
+00:00:02.371632 GUI: UICommon: Handling aboutToQuit request..
+00:00:03.271604 GUI: UICommon: aboutToQuit request handled!
