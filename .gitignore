@@ -5,3 +5,5 @@
 **/*.ovpn
 **/*.crt
 **/*.key
+**/*.sshkey
+**/*.private
