@@ -67,8 +67,33 @@ $$
 
 - `\NPC` - Un modo civile per scrivere NP-Complete$$\newcommand{\NPC}{\mathbb{NP}\text{-}\mathbf{Complete}}\NPC$$
 - `\NPH` - E uno per scrivere NP-Hard$$\newcommand{\NPH}{\mathbb{NP}\text{-}\mathbf{Hard}}\NPH$$
-- `\N`, `\R`, `\P`, `\NP`, `\Z`, `\I` - E per scrivere gli altri insiemi notevoli$$\newcommand{\N}{\mathbb{N}}\newcommand{\R}{\mathbb{R}}\newcommand{\P}{\mathbb{P}}\newcommand{\NP}{\mathbb{NP}}\newcommand{\Z}{\mathbb{Z}}\newcommand{\I}{\mathbb{I}}\N,\R,\P,\NP,\Z,\I$$
+- `\N`, `\R`, `\P`, `\NP`, `\Z`, `\I` - E per scrivere gli altri insiemi notevoli$$\newcommand{\N}{\mathbb{N}}\newcommand{\R}{\mathbb{R}}\newcommand{\P}{\mathbb{P}}\newcommand{\NP}{\mathbb{NP}}\newcommand{\Z}{\mathbb{Z}}\newcommand{\I}{\mathbb{I}}\newcommand{\C}{\mathbb{C}}\N,\R,\P,\NP,\Z,\I, \C$$
 - `\ss`, `\sse` - Non mi va di scrivere `\subset` e `\subseteq`$$\newcommand{\ss}{\subset}\newcommand{\sse}{\subseteq}A\ss B\quad C\sse D$$
+
+# Quantum Information
+
+- `\kz`, `\ku`, `\kp`, `\km` - Modi rapidi per scrivere i ket più importanti$$\newcommand{\kz}{|0\ket}\kz \newcommand{\ku}{|1\ket}\ku \newcommand{\kp}{|+\ket}\kp \newcommand{\km}{|-\ket}\km $$
+###### Scrivere rapidamente gli operatori principali
+
+`\identity`, `\paulix`, `\pauliy`, `\pauliz`
+
+$$
+\newcommand{\identity}{\begin{pmatrix}1&0\\0&1\end{pmatrix}}\identity
+\newcommand{\paulix}{\begin{pmatrix}0&1\\1&0\end{pmatrix}}\paulix
+\newcommand{\pauliy}{\begin{pmatrix}0&-i\\i&0\end{pmatrix}}\pauliy
+\newcommand{\pauliz}{\begin{pmatrix}1&0\\0&-1\end{pmatrix}}\pauliz
+$$
+
+`\hadamard`
+$$
+\newcommand{\hadamard}{{1\over\sqrt2}\begin{pmatrix}1&1\\1&1\end{pmatrix}}\hadamard
+$$
+`\gateS`, `\gateT`
+$$
+\newcommand{\gateS}{\begin{pmatrix}1&0\\0&i\end{pmatrix}}\calS=\gateS
+\newcommand{\gateT}{\begin{pmatrix}1&0\\0&{1+i\over\sqrt2}\end{pmatrix}}\qquad\calT=\gateT
+
+$$
 
 # Utility
 
