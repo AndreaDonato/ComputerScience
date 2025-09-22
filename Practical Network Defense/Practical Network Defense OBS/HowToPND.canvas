@@ -285,7 +285,7 @@
 		{"id":"4ef3586172cf96d4","type":"text","text":"# IDS/IPS","x":-10580,"y":26510,"width":759,"height":1089},
 		{"id":"036f9dbcc491c2c4","type":"text","text":"# SPACING","x":-10071,"y":27599,"width":250,"height":235,"color":"5"},
 		{"id":"1df3ef91eb79a52c","type":"text","text":"# Terzo Assignment  - VPN","x":-17129,"y":29192,"width":1259,"height":2379,"color":"3"},
-		{"id":"8d12896b3d98c953","x":-12059,"y":19867,"width":259,"height":133,"color":"1","type":"text","text":"# dove metto il server VPN??"}
+		{"id":"8d12896b3d98c953","type":"text","text":"# dove metto il server VPN??","x":-12059,"y":19867,"width":259,"height":133,"color":"1"}
 	],
 	"edges":[
 		{"id":"428ec3c727bcfebf","fromNode":"22dfa299c258426a","fromSide":"top","toNode":"8603be4ae948e472","toSide":"bottom"},

@@ -72,7 +72,7 @@ $$
 
 # Quantum Information
 
-- `\kz`, `\ku`, `\kp`, `\km` - Modi rapidi per scrivere i ket più importanti$$\newcommand{\kz}{|0\ket}\kz \newcommand{\ku}{|1\ket}\ku \newcommand{\kp}{|+\ket}\kp \newcommand{\km}{|-\ket}\km $$
+- `\kz`, `\ku`, `\kp`, `\km` - Modi rapidi per scrivere i ket più importanti$$\newcommand{\kz}{|0\ket}\kz \newcommand{\ku}{|1\ket}\ku \newcommand{\kp}{|+\ket}\kp \newcommand{\km}{|-\ket}\km$$
 ###### Scrivere rapidamente gli operatori principali
 
 `\identity`, `\paulix`, `\pauliy`, `\pauliz`
