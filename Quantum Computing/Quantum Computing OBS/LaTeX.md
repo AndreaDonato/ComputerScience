@@ -116,3 +116,4 @@ $$
 - `\BTC`, `\ETH` - Un modo più carino di scrivere Bitcoin ed Ethereum$$\newcommand{\BTC}{\mathsf{BTC}}\BTC\quad\newcommand{\ETH}{\mathsf{ETH}}\ETH$$
 - `\bit` - Devo distinguere tra $\mathsf{bit}$ informativo e `bit` fisico$$\newcommand{\bit}{\mathsf{bit}}\bit$$
 - `\SNR` - Signal to Noise Ratio$$\newcommand{\SNR}{\mathsf{SNR}}\SNR$$
+- `\Enc`, `\Dec` - Per formattare rapidamente le funzioni `Encryption` e `Decryption`$$\newcommand{\Enc}{\text{Enc}}\Enc \quad \newcommand{\Dec}{\text{Dec}}\Dec$$
