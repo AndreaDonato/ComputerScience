@@ -72,7 +72,13 @@ $$
 
 # Quantum Information
 
-- `\kz`, `\ku`, `\kp`, `\km` - Modi rapidi per scrivere i ket più importanti$$\newcommand{\kz}{|0\ket}\kz \newcommand{\ku}{|1\ket}\ku \newcommand{\kp}{|+\ket}\kp \newcommand{\km}{|-\ket}\km$$
+- `\kz`, `\ku`, `\kp`, `\km` - Modi rapidi per scrivere i ket più importanti
+$$
+\newcommand{\kz}{|0\ket}\kz
+\newcommand{\ku}{|1\ket}\ku
+\newcommand{\kp}{|+\ket}\kp
+\newcommand{\km}{|-\ket}\km
+$$
 ###### Scrivere rapidamente gli operatori principali
 
 `\identity`, `\paulix`, `\pauliy`, `\pauliz`
@@ -108,6 +114,29 @@ $$
 -  `\impose` - Voglio un modo rapido per scrivere `\stackrel{!}{=}`$$\newcommand{\impose}{\stackrel{!}{=}}\impose$$
 - `\meanx` - Vorrei evitare di scrivere ogni volta `\overline{x}` (ed altri, tipo `y`, se serve)$$\newcommand{\meanx}{\overline{x}}\meanx\newcommand{\meany}{\overline{y}}\meany$$
 - `\E` - Per scrivere rapidamente l'operatore valore atteso$$\newcommand{\E}{\mathbb{E}}\E$$
+- `\aq`, `\cq`, `\AQ`, `\CQ` - Per scrivere più facilmente `\big[`, `\big]`, `\bigg[`, `\bigg]`
+$$
+[]
+\newcommand{\aq}{\big[}\aq
+\newcommand{\cq}{\big]}\cq
+\newcommand{\AQ}{\bigg[}\AQ
+\newcommand{\CQ}{\bigg]}\CQ
+$$
+- `\at`, `\ct`, `\AT`, `\CT` - Per scrivere più facilmente `\big(`, `\big)`, `\bigg(`, `\bigg)`
+$$
+()
+\newcommand{\at}{\big(}\at
+\newcommand{\ct}{\big)}\ct
+\newcommand{\AT}{\bigg(}\AT
+\newcommand{\CT}{\bigg)}\CT
+$$
+- `\prob`, `\Prob` - Per scrivere più rapidamente `\P\aq roba \cq` e `\P\AQ roba \CQ`
+$$
+\DeclarePairedDelimiter\prob{\P\aq}{\cq}
+\DeclarePairedDelimiter\Prob{\P\AQ}{\CQ}
+\prob{roba}\quad\Prob{roba}
+$$
+
 # Varie
 
 - `\dist` - Non mi va di scrivere `\text{dist}` per la distanza:$$\newcommand{\dist}{\text{dist}}\dist(u,v)$$
@@ -116,4 +145,4 @@ $$
 - `\BTC`, `\ETH` - Un modo più carino di scrivere Bitcoin ed Ethereum$$\newcommand{\BTC}{\mathsf{BTC}}\BTC\quad\newcommand{\ETH}{\mathsf{ETH}}\ETH$$
 - `\bit` - Devo distinguere tra $\mathsf{bit}$ informativo e `bit` fisico$$\newcommand{\bit}{\mathsf{bit}}\bit$$
 - `\SNR` - Signal to Noise Ratio$$\newcommand{\SNR}{\mathsf{SNR}}\SNR$$
-- `\Enc`, `\Dec` - Per formattare rapidamente le funzioni `Encryption` e `Decryption`$$\newcommand{\Enc}{\text{Enc}}\Enc \quad \newcommand{\Dec}{\text{Dec}}\Dec$$
+- `\Enc`, `\Dec`, `\Tag` - Per formattare rapidamente le funzioni `Encryption`, `Decryption`e `Tag`$$\newcommand{\Enc}{\text{Enc}}\Enc \quad \newcommand{\Dec}{\text{Dec}}\Dec\quad\newcommand{\Tag}{\text{Tag}}\Tag$$
