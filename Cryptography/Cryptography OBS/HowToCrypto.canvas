@@ -39,9 +39,13 @@
 		{"id":"9afef0e97ec9d7f2","type":"text","text":"Se hai tempo anche [questo](https://en.wikipedia.org/wiki/R%C3%A9nyi_entropy#R%C3%A9nyi_divergence) è interessante","x":979,"y":1652,"width":380,"height":90,"color":"1"},
 		{"id":"98f298d92a403bc8","type":"text","text":"# Seeded Extractors","x":2807,"y":2332,"width":759,"height":802,"color":"3"},
 		{"id":"2bc8cb7ada9ead31","type":"text","text":"# Leftover Hash Lemma","x":2807,"y":1297,"width":759,"height":802,"color":"3"},
+<<<<<<< HEAD
 		{"id":"7a5fa1ef00051172","x":-1240,"y":4404,"width":759,"height":371,"type":"text","text":"# Signora mia, in che mondo viviamo..."},
 		{"id":"c614bd5dab277881","x":3816,"y":1297,"width":759,"height":802,"color":"1","type":"text","text":"# Dimostrazione Leftover Hash Lemma\n"},
 		{"id":"c36a321426aa0b61","type":"text","text":"# 3/10 - Zoom è una merda\n\nproof di leftover hash in due step: prima un altro lemma e poi quello. visto che sono entrato dopo mezz'ora (perché zoom fa schifo) guarda appunti crypto negativo.\n\n\n\n","x":5220,"y":1297,"width":759,"height":802}
+=======
+		{"id":"9890179548199db4","type":"text","text":"\n","x":-1698,"y":2548,"width":518,"height":272}
+>>>>>>> 2c01a07440787c6c2695670cba227570ffbdbfe8
 	],
 	"edges":[
 		{"id":"f7582924cfe4cd0b","fromNode":"bdd4244555c9c774","fromSide":"right","toNode":"3bb988d1bfcbf2a4","toSide":"left"},
