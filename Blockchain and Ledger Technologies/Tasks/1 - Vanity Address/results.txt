@@ -1,0 +1,68 @@
+Prefix difficulty:                   22 1A
+Difficulty: 22
+Using 16 worker thread(s)
+Pattern: 1A                                                                    
+Pubkey (hex): 043e37db8bf3d0fa6f69bb36ce8a168b0d89905552ac64555e30e612ee79d2e975a291330978ca96440f7d8b1298bf72726f462dc2183b6a5d5cecdaaf88b0e93b
+Privkey (hex): E8C38EE8336535379AC0CD9714790CC3DD6D11FF9DCB5BFF5839A7826FC47BEF
+Privkey (ASN1): 30740201010420e8c38ee8336535379ac0cd9714790cc3dd6d11ff9dcb5bff5839a7826fc47befa00706052b8104000aa144034200043e37db8bf3d0fa6f69bb36ce8a168b0d89905552ac64555e30e612ee79d2e975a291330978ca96440f7d8b1298bf72726f462dc2183b6a5d5cecdaaf88b0e93b
+Address: 1Aubjp5CamZprJrV7S4qYWDqj5LgrgKAcz
+Privkey: 5KaoDt9B4x48cPdfJdNgXrrPveQfTC5BVd4kqjnmzgzYzoPukma
+
+Prefix difficulty:                 1330 1An
+Difficulty: 1330
+Using 16 worker thread(s)
+Pattern: 1An                                                                   
+Pubkey (hex): 04c3fcfa45379098501646f69f5a4e658e4879dc4a1e39aa835d0f9e85e025032662cfac9d2e2c98f0c182b99bdb55c6855e096505bafbcb83dcb8bcaa90de3534
+Privkey (hex): 6EB4343827F067FD36C0F87AA5D65377DE155F43EE0C727151F2B8399409298D
+Privkey (ASN1): 307402010104206eb4343827f067fd36c0f87aa5d65377de155f43ee0c727151f2b8399409298da00706052b8104000aa14403420004c3fcfa45379098501646f69f5a4e658e4879dc4a1e39aa835d0f9e85e025032662cfac9d2e2c98f0c182b99bdb55c6855e096505bafbcb83dcb8bcaa90de3534
+Address: 1AnEQ6esPwghtCYwRdJ1SieMozk7kbYYxs
+Privkey: 5Jf3N6ohyih6dw3HTf61UKyVMEjL2xrkmnMWMHYpK9a8upeWrR3
+
+Prefix difficulty:                77178 1And
+Difficulty: 77178
+Using 16 worker thread(s)
+Pattern: 1And                                                                  
+Pubkey (hex): 04c0aeaef2820ddda5dce77bbe4d8aa0a3ee40ee8b3c789b5012732d93864b8ffd06f2834afe01ab21e55e5820758fc8fefea86e2f9cf719346d8914f48efae838
+Privkey (hex): EB6FAA88E4D499461675861EF7D29C88D7C60FFE381D43E4D6820CF1C0658AC1
+Privkey (ASN1): 30740201010420eb6faa88e4d499461675861ef7d29c88d7c60ffe381d43e4d6820cf1c0658ac1a00706052b8104000aa14403420004c0aeaef2820ddda5dce77bbe4d8aa0a3ee40ee8b3c789b5012732d93864b8ffd06f2834afe01ab21e55e5820758fc8fefea86e2f9cf719346d8914f48efae838
+Address: 1AndMm6QCCyCVtvMpqJvh7z1f47Q8AGM8S
+Privkey: 5KbyUyZ1KsaY3VrrFQgQvZkZcFWMMs5kQb8BxQBoJecRSUHsM8K
+
+Prefix difficulty:              4476342 1Andr
+Difficulty: 4476342
+Using 16 worker thread(s)
+Pattern: 1Andr                                                                 
+Pubkey (hex): 04a3416d390421f720c4973aaa3f1cf01de64716bee6169e6400747d14e83addedeb5a6238d15b2b27723da4de86e6c5acf8372d5bde3e067e7c31c2ad73a3d38b
+Privkey (hex): 83F59410713CEFE9A7D730EEBF847F00D1F90299E5900D7210CB90F40290AEBB
+Privkey (ASN1): 3074020101042083f59410713cefe9a7d730eebf847f00d1f90299e5900d7210cb90f40290aebba00706052b8104000aa14403420004a3416d390421f720c4973aaa3f1cf01de64716bee6169e6400747d14e83addedeb5a6238d15b2b27723da4de86e6c5acf8372d5bde3e067e7c31c2ad73a3d38b
+Address: 1AndrBfvqP67gyLzyGgrCMn3Wn5q1619E2
+Privkey: 5JpQJcWvLCXmZ1QjkFEvPhxudcGhS8wVwRZLuVrvxgFMPRptwFQ
+
+Prefix difficulty:            259627881 1Andre
+Difficulty: 259627881
+Using 16 worker thread(s)
+Pattern: 1Andre                                                                
+Pubkey (hex): 0496b23db8920dbec7588193f3e0302ceae174fa0a3b6359a7c95b47f51760551d194ccad7d65419cdc234d4e00bf7a7e01f766681801d55c6954fa8da3a96392c
+Privkey (hex): CDC253A6F89011FE0A12E6339E076441AE028576C50EB31406EC7431A5E31782
+Privkey (ASN1): 30740201010420cdc253a6f89011fe0a12e6339e076441ae028576c50eb31406ec7431a5e31782a00706052b8104000aa1440342000496b23db8920dbec7588193f3e0302ceae174fa0a3b6359a7c95b47f51760551d194ccad7d65419cdc234d4e00bf7a7e01f766681801d55c6954fa8da3a96392c
+Address: 1AndreDku5wRE184YtiHDUZesdrYdnXxJW
+Privkey: 5KNuRPS4yohX3uK7yhuuNzTMnGHSz6N99SirGoHM9dvGUVCnKYX
+
+
+Da qui in poi il 12600K ci mette un'ora, quindi usiamo la 3080
+
+Pattern: 1Andrea                                                               
+Pubkey (hex): 04597416f0050f9c8214170f71a9254ec363f9ab6f42b1171dcabc98727c03558b6652ae08810fcc2585552ff3584e7e3b8c6c72f4b73053ed3a55cd9739eb0fba
+Privkey (hex): 024620FBFD2F04C80EC089AA60395DA285C7C59FC7156F5194665C2E997CC80A
+Privkey (ASN1): 30740201010420024620fbfd2f04c80ec089aa60395da285c7c59fc7156f5194665c2e997cc80aa00706052b8104000aa14403420004597416f0050f9c8214170f71a9254ec363f9ab6f42b1171dcabc98727c03558b6652ae08810fcc2585552ff3584e7e3b8c6c72f4b73053ed3a55cd9739eb0fba
+Address: 1AndreahknZtqg4VQNKGtmMiTZEdevQJxT
+Privkey: 5HqHfbbv269q1LWTZHcDzbRqufRZjmwgSchrV6GLoEQ9JjQC2oy
+
+Pattern: 1AndreaD                                                              
+Pubkey (hex): 046b60fa39b7e1f159871757ce7658f31c1b3cb6bafd6572b009289925fced9a494e5ca8396c1d728ec2b97ce74abfc4f2c98d764b171f5f715b4621bb9b14f29a
+Privkey (hex): C0C0DC2FEA6E710C5702C568AE3D7CDF4B7EB788421E5E8DDA702E6D8F920200
+Privkey (ASN1): 30740201010420c0c0dc2fea6e710c5702c568ae3d7cdf4b7eb788421e5e8dda702e6d8f920200a00706052b8104000aa144034200046b60fa39b7e1f159871757ce7658f31c1b3cb6bafd6572b009289925fced9a494e5ca8396c1d728ec2b97ce74abfc4f2c98d764b171f5f715b4621bb9b14f29a
+Address: 1AndreaDtr5xwCcmg7LdCATBT9NsYZvM4N
+Privkey: 5KHBCytWXWBtziSfHF9NtMqzuDz3zSsA4ZUUkXfyePybtSV1mXz
+
+Da qui in poi anche la GPU ci mette troppo (1.1 giorni...!) quindi basta, non mi va
