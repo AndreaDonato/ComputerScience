@@ -22,7 +22,7 @@ $$
 \newcommand{\s}{\sigma}\s
 \newcommand{\S}{\Sigma}\S
 \newcommand{\t}{\tau}\t
-\newcommand{\f}{\phi}\f
+\newcommand{\f}{\varphi}\f
 \newcommand{\F}{\Phi}\F
 \newcommand{\c}{\chi}\c
 \newcommand{\o}{\omega}\o
@@ -72,13 +72,41 @@ $$
 
 # Quantum Information
 
-- `\kz`, `\ku`, `\kp`, `\km` - Modi rapidi per scrivere i ket più importanti
+
+- `\scalar{}{}` - Lo avrei chiamato `\braket`, ma esiste già e per qualche motivo è un valore atteso:
 $$
-\newcommand{\kz}{|0\ket}\kz
-\newcommand{\ku}{|1\ket}\ku
-\newcommand{\kp}{|+\ket}\kp
-\newcommand{\km}{|-\ket}\km
+\DeclarePairedDelimiterX{\scalar}[2]{\langle}{\rangle}{#1\delimsize|#2}
+\scalar{x}{y}
 $$
+- `\kz`, `\ku`, `\kp`, `\km`, `\ka`, `\kb`, `\kx`, `\ky`, `\kps`, `\kph` - Modi rapidi per scrivere i `ket` più importanti...
+$$
+\newcommand{\kz}{\ket{0}}\kz\quad
+\newcommand{\ku}{\ket{1}}\ku\quad
+\newcommand{\kp}{\ket{+}}\kp\quad
+\newcommand{\km}{\ket{-}}\km\quad
+\newcommand{\ka}{\ket{a}}\ka\quad
+\newcommand{\kb}{\ket{b}}\kb\quad
+\newcommand{\kx}{\ket{x}}\kx\quad
+\newcommand{\ky}{\ket{y}}\ky\quad
+\newcommand{\kps}{\ket{\psi}}\kps\quad
+\newcommand{\kph}{\ket{\f}}\kph
+$$
+
+- `\bz`, `\bu`, `\bp`, `\bm`, `\ba`, `\bb`, `\bx`, `\by`, `\bps`, `\bph`- ... e relative versioni `bra`
+$$
+\newcommand{\bz}{\bra{0}}\bz\quad
+\newcommand{\bu}{\bra{1}}\bu\quad
+\newcommand{\bp}{\bra{+}}\bp\quad
+\newcommand{\bm}{\bra{-}}\bm\quad
+\newcommand{\ba}{\bra{a}}\ba\quad
+\newcommand{\bb}{\bra{b}}\bb\quad
+\newcommand{\bx}{\bra {x}}\bx\quad
+\newcommand{\by}{\bra{y}}\by\quad
+\newcommand{\bps}{\bra{\psi}}\bps\quad
+\newcommand{\bph}{\bra{\f}}\bph
+$$
+
+- `\B` - Il dominio $\{0,1\}$ dei `bit`:$$\newcommand{\B}{\mathbb{B}}\B$$
 ###### Scrivere rapidamente gli operatori principali
 
 `\identity`, `\paulix`, `\pauliy`, `\pauliz`
@@ -108,7 +136,6 @@ $$
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
     \floor*{\frac{x}{2}} \leq \frac{x}{2} \leq \ceil*{\frac{x}{2}}
 $$
-- `\bra`, `\ket` - Notazione `<bra|ket>`:$$\newcommand{\bra}{\langle}\newcommand{\ket}{\rangle}\bra x|y\ket = \sum_ix_iy_i$$
 
 - `\so` - Non mi va di scrivere `\Rightarrow`:$$\newcommand{\so}{\Rightarrow}x\so y$$
 -  `\impose` - Voglio un modo rapido per scrivere `\stackrel{!}{=}`$$\newcommand{\impose}{\stackrel{!}{=}}\impose$$
