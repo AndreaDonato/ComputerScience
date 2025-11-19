@@ -1,0 +1,194 @@
+// BB84 QKD Protocol 
+
+// Constants definition
+n := 4:!N; 
+delta := 1:!N; 
+//total_bits := ((4+delta)*n) :!N;
+// se lascio total_bits come definito qui sopra, non mi funziona il codice
+total_bits:=5000 :!N;
+err_threshold:=2:!N; 
+
+// Generates random data bits
+def random_bits(total_bits:!N):! B^total_bits {
+    a:= vector(total_bits, 0:!B); 
+    for i in [0..total_bits){
+      a[i]=measure(H(false));
+    }
+    return a;
+}
+
+def random_index(max:!N): !N {
+    // Special case when max is 1
+    if max == 1 { return 0:!N; }
+    
+    // Determine how many bits we need to represent max-1
+    bits_needed := 0:!N;
+    temp := max-1;
+    while temp > 0 {
+        temp = temp div 2;
+        bits_needed += 1;
+    }
+    
+    // Generate enough random bits and compute the number using powers of 2
+    result := 0:!N;
+    power_of_two := 1:!N;  // Tracks 2^i without bit shifting
+    for i in [0..bits_needed) {
+        if measure(H(false)) {
+            result = result + power_of_two;
+        }
+        power_of_two = power_of_two * 2;
+    }
+    
+    // Ensure it's within range
+    return result % max;
+}
+
+// Function to randomly select indices for check bits
+def select_check_indices(matching_length:!N, n:!N): !B^matching_length {
+    // We'll use quantum randomness to select check bits
+    is_check_bit := vector(matching_length, false:!B);
+    
+    // We need to select exactly n bits for checking
+    count := 0:!N;
+    while count < n {
+        // Generate a proper random index
+        selected_index := random_index(matching_length);
+        
+        // If not already selected as check bit
+        if !is_check_bit[selected_index] {
+            is_check_bit[selected_index] = true;
+            count += 1;
+        }
+    }
+    return is_check_bit;
+}
+
+
+// Main BB84 protocol function
+def BB84_protocol() : !B[] {
+    // Step 1: Alice generates random data bits
+    // Step 2: Alice generates random basis choices and encodes qubits
+    // Step 3: Alice sends qubits to Bob 
+    // Step 4: Bob generates random bases and measures
+
+    alice_bases := random_bits(total_bits);
+    bob_bases := random_bits(total_bits);
+
+    alice_string_a := random_bits(total_bits); //(a)
+        
+     //encode(alice_string_a, alice_bases);
+    bob_results := vector(total_bits, 0:!B); //  measure_qubits(qubits_sent, bob_bases); //(a1)
+
+   
+    for i in [0..total_bits) {
+        qubits_sent := 0:B; // Initialize qubits_sent for each bit
+        //Encoding a given the bitsring b 
+        //If the base is Z (b is 0), a is encoded as |0⟩ if it was a 0 or as |1⟩ if it was 1.
+        // If the base is X (b is 1), a is encoded as |+⟩ if it was a 0 or as |-⟩ if it was 1.
+        if alice_string_a[i] {
+            qubits_sent := X(qubits_sent);
+        }
+        if alice_bases[i] { // if basis choice is 1, use Hadamard basis (X)
+            qubits_sent := H(qubits_sent);
+        }
+        //Bob recives and measures the qubits given a random bitstring b1 and he gets a1
+        // If b1=0 use Z base
+        // If b=1 use X base
+        if bob_bases[i] { // measure in X basis
+            qubits_sent:=H(qubits_sent);
+        }
+        bob_results[i] = measure(qubits_sent);// measure in Z basis
+    }
+
+    // Step 5: Alice announces her basis choices
+    
+    // Step 6: keep only bits where bases matched(where b=b1 they keep the bits in a and a1)
+
+    // Count matches
+    length_matching := 0:!N;
+    for i in [0..total_bits) {
+        if alice_bases[i] == bob_bases[i] {
+            length_matching +=1;
+        }
+    }
+    // Check if we have enough matches
+    if length_matching < 2*n {
+        //print("!PROTOCOL ABORTED! --- Insufficient bitstring length");
+        return vector(1, 0:!B);
+    }
+    
+    // Raccogli i bit
+    matching_basis_alice := vector(length_matching, 0:!B);
+    matching_basis_bob := vector(length_matching, 0:!B);
+    
+    index := 0:!N; // Index for matching bits
+    for i in [0..total_bits) {
+        if alice_bases[i] == bob_bases[i] && index < length_matching {
+            matching_basis_alice[index] = alice_string_a[i];
+            matching_basis_bob[index] = bob_results[i];
+            index += 1;
+        }
+    }
+
+    // Step 7: Select check bits 
+    is_check_bit := select_check_indices(length_matching, n);
+    
+    // Separate into check bits and key bits
+    check_count := 0:!N;
+    key_count := 0:!N;
+
+    // First count how many check bits we have
+    for i in [0..length_matching) {
+        if is_check_bit[i] {
+            check_count += 1;
+        } else {
+            key_count += 1;
+        }
+    }
+    
+    // Now allocate vectors
+    check_bits_alice := vector(check_count, 0:!B);
+    check_bits_bob := vector(check_count, 0:!B);
+    final_key_alice := vector(key_count, 0:!B);
+    final_key_bob := vector(key_count, 0:!B);
+    
+    check_index := 0:!N;
+    key_index := 0:!N;
+    for i in [0..length_matching) {
+        if is_check_bit[i] {
+            check_bits_alice[check_index] = matching_basis_alice[i];
+            check_bits_bob[check_index] = matching_basis_bob[i];
+            check_index += 1;
+        } else {
+            final_key_alice[key_index] = matching_basis_alice[i];
+            final_key_bob[key_index] = matching_basis_bob[i];
+            key_index += 1;
+        }
+    }
+    
+    // Step 8: Compare check bits
+    error_count := 0:!N;
+    for i in [0..check_count) {
+        if check_bits_alice[i] != check_bits_bob[i] {
+            error_count += 1;
+        }
+    }
+    
+    
+    // If error rate is too high, abort
+    if error_count > err_threshold { 
+        //print("!PROTOCOL ABORTED! --- Error rate too high");
+        return vector(0, 0:!B); 
+    }
+    
+    // If everything is OK, return the final key
+    return final_key_bob;
+}
+
+
+def main(){
+  key:= BB84_protocol(): !B[];
+  print(key)
+}
+
+

@@ -1,0 +1,21 @@
+def bitwise_map [n:!N] (bits : B^n, f : B! -> B) {
+  for i in [0..n) {
+    bits[i] := f(bits[i]);
+  }
+  return bits;
+}
+
+def DJ[n:!N](const f : B^n! -> B^n) {
+  state := (0 : int[n]) as B^n;     
+  state[n] := X(state[n]);          // prepare state
+
+  state := bitwise_map(state, H);   // apply Hadamards
+
+  state := f(state);    // apply oracle
+
+  state := bitwise_map(state, H);   // apply Hadamards
+  state[n] := H(state[n]);
+
+  // return false is f is constant and true if f balanced
+  return measure(state) == ((0 : int[n]) as B^n);
+}
