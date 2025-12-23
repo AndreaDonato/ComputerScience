@@ -7,3 +7,6 @@
 **/*.key
 **/*.sshkey
 **/*.private
+
+# Do not sync other git directories
+0 - Completed/Internet of Things/Progetto
