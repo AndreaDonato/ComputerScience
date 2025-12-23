@@ -1,0 +1,1 @@
+Nota: la cartella Progetto non si aprirà da GUI web perché è un'altra repository.
