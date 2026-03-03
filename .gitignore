@@ -8,8 +8,8 @@
 **/*.sshkey
 **/*.private
 .github-recovery-codes.txt
+**/*firmato*
 
 # Do not sync other git directories
 0 - Completed/Internet of Things/Progetto
 
-AFC/PF*
